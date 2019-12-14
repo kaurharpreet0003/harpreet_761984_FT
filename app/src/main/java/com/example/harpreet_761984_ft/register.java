@@ -44,7 +44,7 @@ public class register extends AppCompatActivity {
                     String m = et_mail.getText().toString();
                     int p = Integer.parseInt(et_phone.getText().toString());
 
-                    Intent i = new Intent(register.this, save.class);
+                    Intent i = new Intent(register.this, verify.class);
 
                     i.putExtra(EXTRA_NAME, n);
                     i.putExtra(Intent.EXTRA_EMAIL, m);

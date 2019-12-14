@@ -10,12 +10,12 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     Button button;
-    TextView textView;
     ListView listView;
 
     ArrayList<String> arrayList;
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = findViewById(R.id.add_user);
-        textView = findViewById(R.id.txtView);
         listView = findViewById(R.id.lv);
 
         arrayList = new ArrayList<String>();
@@ -40,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, register.class);
                 startActivity(intent);
+
             }
         });
 
     }
+    
 }

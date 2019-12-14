@@ -7,18 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:background="#66b69d"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"/>
-
     <ListView
         android:id="@+id/lv"
         android:layout_marginTop="10dp"
@@ -37,8 +25,6 @@
         android:layout_marginRight="100dp"
         android:background="#66b69d"
         android:textColor="@android:color/white"/>
-
-
 
 
 </LinearLayout>
