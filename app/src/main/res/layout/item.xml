@@ -6,7 +6,6 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/images"
-        android:onClick="tickFunc"/>
+        android:id="@+id/images"/>
 
 </LinearLayout>
