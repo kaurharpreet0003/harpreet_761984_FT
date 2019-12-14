@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = getIntent();
+//        Intent intent1 = getIntent();
+
         button = findViewById(R.id.add_user);
         listView = findViewById(R.id.lv);
 
@@ -42,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
-    
 }
+

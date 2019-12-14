@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ import java.util.Random;
 
 public class verify extends AppCompatActivity {
 
+    CheckBox check_Box;
     Button verify;
     GridView gridView;
     ImageView refresh_image;
@@ -33,6 +35,8 @@ public class verify extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify);
+
+        check_Box = findViewById(R.id.checkBox);
         refresh_image = findViewById(R.id.refresh);
         gridView = findViewById(R.id.grid_view);
         verify = findViewById(R.id.btnVerify);
@@ -84,7 +88,7 @@ public class verify extends AppCompatActivity {
                 Collections.sort(check_aList);
 
 
-                if (match_aList.equals(check_aList)) {
+                if (match_aList.equals(check_aList))   {
                     t = 1;
                     Toast.makeText(verify.this, "verified", Toast.LENGTH_SHORT).show();
                 }
@@ -94,9 +98,16 @@ public class verify extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (t == 0) {
-                    Intent intent = new Intent(verify.this, MainActivity.class);
-                } else {
+                    secDialog();
+//                    Intent intent = new Intent(verify.this, MainActivity.class);
+//                    startActivity(intent);
+
+                } else if (t > 0 && check_Box.isChecked() ){
+
                     open_dialog();
+                    Intent intent = new Intent(verify.this, MainActivity.class);
+                    startActivity(intent);
+
                 }
             }
         });
@@ -121,4 +132,11 @@ public class verify extends AppCompatActivity {
         dg.show(getSupportFragmentManager(), "dg");
 
     }
+
+    public void secDialog(){
+        second_dialog sd = new second_dialog();
+        sd.show(getSupportFragmentManager(), "sd");
+    }
+
 }
+
