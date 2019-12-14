@@ -79,7 +79,7 @@ public class verify extends AppCompatActivity {
                 imageView.animate().alpha(.5f);
 
                 check_aList.add((Integer) iconAdapter.getItem(position));
-                Toast.makeText(verify.this, "" + check_aList, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(verify.this, "" + check_aList, Toast.LENGTH_SHORT).show();
                 Collections.sort(match_aList);
                 Collections.sort(check_aList);
 
